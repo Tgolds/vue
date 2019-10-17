@@ -25,8 +25,8 @@ export default {
     data() {
         return {
           Loginform :{
-            username : 'admin',
-            password : "123456"
+            username : '',
+            password : ""
           },
           LoginRules:{
               username : [
@@ -59,6 +59,7 @@ export default {
                 
                 //编程式导航跳转页面
                 this.$router.push('/home')
+                console.log(window.sessionStorage.getItem('token'))
             })
         }
     },
